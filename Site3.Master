@@ -1,0 +1,113 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site3.master.cs" Inherits="WebApplication7.Site3" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="StyleSheet3.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    <style type="text/css">
+        .auto-style2 {
+            height: 34px;
+        }
+    </style>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table>
+                <tr>
+                    <td class="box1">
+                        <asp:Image ID="Image2" runat="server" Height="100px" ImageUrl="~/assets/log.png" Width="150px" />
+                    </td>
+                    <td class="box2">
+                        <asp:TextBox placeholder="Search all products......" ID="Search1" runat="server" Height="50px" Width="650px" CssClass="txtbx1" Font-Bold="False" BorderStyle="Solid"></asp:TextBox>
+                        <asp:Button ID="Button1" runat="server" Text="Search" Height="50px" Width="205px" CssClass="bt1" BorderColor="Black" BorderWidth="1px" Font-Names="Arial Rounded MT Bold" />
+                    </td>
+                        
+                    <td class="box3">
+                        <asp:LinkButton ID="LinkButton1" runat="server"  ForeColor="Black" Font-Underline="False" Font-Bold="False" PostBackUrl="~/login.aspx">Login</asp:LinkButton>
+                       
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       
+                        <asp:LinkButton ID="LinkButton2" runat="server" Font-Underline="False" ForeColor="Black" PostBackUrl="~/register.aspx">Register</asp:LinkButton>
+                        </td>
+                        
+                    <td class="box4">
+                     <asp:ImageButton ID="ImageButton5" runat="server" ImageUrl="~/assets/shopping-cart.png" OnClick="ImageButton5_Click"/>
+                        <br />My Cart
+                    </td>
+                </tr>
+            </table>
+        <div>
+            
+            <br />
+            <table class="table2">
+                <tr>
+                    <td class="imgpad">
+                        
+                        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/assets/20240304_210812_0000.png" Height="195" Width="300" PostBackUrl="~/stap.aspx" />
+                        
+                    </td>
+                    <td class="imgpad">
+                      <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/assets/20240304_210750_0000.png" Height="195px" Width="300px" PostBackUrl="~/snacks.aspx" />
+                    </td>
+                    <td class="imgpad" >
+                      <asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="~/assets/20240304_205630_0000.png" Height="195px" Width="300px" PostBackUrl="~/pack.aspx" />
+                    </td>
+                    <td class="imgpad">
+                        <asp:ImageButton ID="ImageButton4" runat="server" ImageUrl="~/assets/20240304_210708_0000.png" Height="195px" Width="300px" PostBackUrl="~/house.aspx" />
+                    </td>
+                    <td class="imgpad">
+                       <asp:ImageButton ID="ImageButton6" runat="server" ImageUrl="~/assets/20240304_211004_0000.png" Height="195px" Width="300px" PostBackUrl="~/dai.aspx" />
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+            <table class="auto-style1">
+                <tr>
+                    <td  style="text-align:right" class="auto-style2">
+                        <asp:Button ID="Button2" runat="server" Text="Home" PostBackUrl="~/Site.aspx" BackColor="Orange" BorderColor="Orange" BorderWidth="0px" Font-Size="20px" Height="27px" Width="59px" />
+                        &nbsp;&nbsp;
+                        <asp:Label ID="Label2" runat="server" Style="text-align:left"></asp:Label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/login.aspx">Click Here</asp:HyperLink>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <asp:Button ID="Button3" runat="server" Text="Log Out" BackColor="Orange" BorderWidth="0px" OnClick="Button3_Click" />
+                    </td>
+                </tr>
+            </table>
+
+            <br />
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <br />
+          
+        <table class="table4">
+                <tr>
+                    <td>
+                         <asp:Label ID="Label1" runat="server" ForeColor="White" Text="Contact Us"></asp:Label>
+                            
+                                 <h4 style="color:white">
+                            
+                                 <asp:Image ID="Image11" runat="server" ImageUrl="~/assets/phone-call.png" BackColor="White" Height="18px" Width="18px" />
+                                     79900214432</h4>
+                    </td>
+                    <td>
+                        <asp:HyperLink ID="HyperLink10" runat="server" ForeColor="White" NavigateUrl="~/aboutus.aspx">About Us</asp:HyperLink>
+                    </td>
+                    <td>
+                        <asp:HyperLink ID="HyperLink9" runat="server" ForeColor="White" NavigateUrl="~/WebForm5.aspx">Refund &amp; Return Policy</asp:HyperLink>
+                    </td>
+                </tr>
+            </table></div>
+    </form>
+</body>
+</html>

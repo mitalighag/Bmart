@@ -1,0 +1,397 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{39126490-4A25-45DD-9816-2CE27FB5C24D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication7</RootNamespace>
+    <AssemblyName>WebApplication7</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44323</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Database1.mdf" />
+    <Content Include="App_Data\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\Database2.mdf" />
+    <Content Include="App_Data\Database2_log.ldf">
+      <DependentUpon>Database2.mdf</DependentUpon>
+    </Content>
+    <Content Include="assets\1.jpg" />
+    <Content Include="assets\2.jpg" />
+    <Content Include="assets\20240304_205630_0000.png" />
+    <Content Include="assets\20240304_210708_0000.png" />
+    <Content Include="assets\20240304_210750_0000.png" />
+    <Content Include="assets\20240304_210812_0000.png" />
+    <Content Include="assets\20240304_211004_0000.png" />
+    <Content Include="assets\3.jpg" />
+    <Content Include="assets\31.png" />
+    <Content Include="assets\32.png" />
+    <Content Include="assets\33.png" />
+    <Content Include="assets\d.png" />
+    <Content Include="assets\h.png" />
+    <Content Include="assets\images\AASHIRVAAD Atta with Multigrains %28Multigrain Peeth%29 %281%29.jpg" />
+    <Content Include="assets\images\AASHIRVAAD Atta with Multigrains %28Multigrain Peeth%29.jpg" />
+    <Content Include="assets\images\Alpenliebe Juzt Assorted Jelly Candy.jpg" />
+    <Content Include="assets\images\Amul Dark Chocolate Bars.jpg" />
+    <Content Include="assets\images\Amul Pasteurised Salted Butter.jpg" />
+    <Content Include="assets\images\B Natural Litchi Juice, Goodness of fiber, Vitamin C &amp; E.jpg" />
+    <Content Include="assets\images\Bagrry%27s Koffeelicious Muesli Pouch.jpg" />
+    <Content Include="assets\images\Balaji Wafers Masala Sev Murmura %28Namkeen%29.jpg" />
+    <Content Include="assets\images\Beco Eco Friendly - Tissue Roll or Toilet Tissue Paper.jpg" />
+    <Content Include="assets\images\Beyond Snack Kerala Banana Original Style Chips.jpg" />
+    <Content Include="assets\images\Bikano Aloo Bhujia %28Namkeen%29.jpg" />
+    <Content Include="assets\images\Bikano Tasty Spicy Coated Peanuts %28Besan Masala Shengdane%29.jpg" />
+    <Content Include="assets\images\Bingo Cheese Flavour, Nachos.jpg" />
+    <Content Include="assets\images\Bingo Tedhe Medhe Masala Tadka %28Namkeen%29.jpg" />
+    <Content Include="assets\images\Britannia Cheese Block.jpg" />
+    <Content Include="assets\images\BRITANNIA Treat Cocoa Creme Roll Croissants.jpg" />
+    <Content Include="assets\images\Broccoli.jpg" />
+    <Content Include="assets\images\Cadbury Dairy Milk Fruit and Nut Chocolate Bars.jpg" />
+    <Content Include="assets\images\Cavin%27s Masala Chaasa Buttermilk.jpg" />
+    <Content Include="assets\images\Classic Masoor Dal %28Split%29.jpg" />
+    <Content Include="assets\images\Coconut.jpg" />
+    <Content Include="assets\images\Colin Glass and Surface Cleaner Liquid Spray.jpg" />
+    <Content Include="assets\images\CRYSTAL Oxo-biodegradable.jpg" />
+    <Content Include="assets\images\Dabur Lal Tail - Ayurvedic Baby Oil.jpg" />
+    <Content Include="assets\images\Dlecta Dairy Pure Cream.jpg" />
+    <Content Include="assets\images\DOVE Hair Fall Rescue Conditioner.jpg" />
+    <Content Include="assets\images\EMAMI 7 Oils In One Hair Oil %28Vanushadhinche Tel%29.jpg" />
+    <Content Include="assets\images\EPIGAMIA Milkshake.jpg" />
+    <Content Include="assets\images\Fortune Besan.jpg" />
+    <Content Include="assets\images\Fortune Maida.jpg" />
+    <Content Include="assets\images\Fortune Suji %28Rawa%29.jpg" />
+    <Content Include="assets\images\Freshee Nature%27s Brown Non-stick Food Paper Shrinkwrap.jpg" />
+    <Content Include="assets\images\GAINDA White Perfumed Disinfectant Phenyl Plain.jpg" />
+    <Content Include="assets\images\Go Processed cheese Cubes.jpg" />
+    <Content Include="assets\images\Godrej Expert Rich Creme Hair , Natural Black.jpg" />
+    <Content Include="assets\images\Harpic Disinfectant Bathroom Cleaner Floral.jpg" />
+    <Content Include="assets\images\Harpic Drain Xpert Powder Drain Opener.jpg" />
+    <Content Include="assets\images\Harpic Power Plus Jasmine Liquid Toilet Cleaner.jpg" />
+    <Content Include="assets\images\HEAD &amp; SHOULDERS Smooth and Silky Anti Dandruff Shampoo.jpg" />
+    <Content Include="assets\images\HIMALAYA Baby Powder.jpg" />
+    <Content Include="assets\images\HIMALAYA Gentle Baby Shampoo.jpg" />
+    <Content Include="assets\images\HIMALAYA GENTLE BABY SOAP VALUE PACK.jpg" />
+    <Content Include="assets\images\JOHNSON%27S Baby Cream.jpg" />
+    <Content Include="assets\images\JOHNSON%27S Baby No More Tears Shampoo.jpg" />
+    <Content Include="assets\images\Kellogg%27s Corn Flakes Original,  Cereal Pouch.jpg" />
+    <Content Include="assets\images\Kinder Schokobons Crispy T4 Bites.jpg" />
+    <Content Include="assets\images\KOOK Pipe handle Pizza Cutter Rolling Pizza Cutter.jpg" />
+    <Content Include="assets\images\KURKURE Yummy Cheese Puffcorn.jpg" />
+    <Content Include="assets\images\KVG Grater.jpg" />
+    <Content Include="assets\images\Kwality Crunchy Muesli Fruit &amp; Nut, Breakfast Jar.jpg" />
+    <Content Include="assets\images\L%27Oréal Paris Total Repair 5 Conditioner.jpg" />
+    <Content Include="assets\images\Lay%27s American Style Cream and Onion Chips.jpg" />
+    <Content Include="assets\images\LIVON Hair Serum for Women &amp; Men.jpg" />
+    <Content Include="assets\images\Lizol Disinfectant Surface and Floor Cleaner Floral.jpg" />
+    <Content Include="assets\images\Maaza Mango.jpg" />
+    <Content Include="assets\images\MACARIZE  Plastic, Steel Gas Lighter.jpg" />
+    <Content Include="assets\images\MACARIZE 1000 ml Cooking Oil Dispenser.jpg" />
+    <Content Include="assets\images\MACARIZE Dish Drainer Kitchen Rack Plastic Ergonomic Modern Space Master Kitchen Corner Sink.jpg" />
+    <Content Include="assets\images\MACARIZE Fruits &amp; Vegetables Kitchen Rack Plastic.jpg" />
+    <Content Include="assets\images\MACARIZE Happy Bird Fruit Fork Set Disposable Plastic Fruit Fork.jpg" />
+    <Content Include="assets\images\MACARIZE Plastic Grocery Container.jpg" />
+    <Content Include="assets\images\MACARIZE Spice Set Plastic.jpg" />
+    <Content Include="assets\images\Mamaearth Moisturizing Baby Bathing Soap Bar.jpg" />
+    <Content Include="assets\images\Mamaearth Moisturizing Daily Lotion For Babies and Kids.jpg" />
+    <Content Include="assets\images\MASTER COOK Polypropylene Grocery Container.jpg" />
+    <Content Include="assets\images\Mastercool ICE CUBE TRAY.jpg" />
+    <Content Include="assets\images\Milky Mist Plain Curd.jpg" />
+    <Content Include="assets\images\mix daal.jpg" />
+    <Content Include="assets\images\Mixed Sprouts.jpg" />
+    <Content Include="assets\images\Mr.Muscle Kitchen Cleaner Spray, Lemon Kitchen Cleaner.jpg" />
+    <Content Include="assets\images\natureland organics green moong daal %28whole%29.jpg" />
+    <Content Include="assets\images\NESTLE Kitkat Rich Chocolate coated wafer Bars.jpg" />
+    <Content Include="assets\images\Onion.jpg" />
+    <Content Include="assets\images\Organic Tattva Mot Matki %28Whole%29.jpg" />
+    <Content Include="assets\images\Organic Tattva Ragi Flour %28Nachniche Peeth%29.jpg" />
+    <Content Include="assets\images\Organic Tattva Red Rajma %28Whole%29.jpg" />
+    <Content Include="assets\images\Origami Kitchen Towels.jpg" />
+    <Content Include="assets\images\Origami Non Woven Kitchen Towel.jpg" />
+    <Content Include="assets\images\Origami So Soft Crepe Tissues White Paper Napkins.jpg" />
+    <Content Include="assets\images\Paper boat Coconut Water.jpg" />
+    <Content Include="assets\images\Parachute Pure Coconut Hair Oil %28Naralache Tel%29.jpg" />
+    <Content Include="assets\images\PARLE Melody Chocolaty Toffee.jpg" />
+    <Content Include="assets\images\peas.jpg" />
+    <Content Include="assets\images\Peher Plastic 2 in 1 Plastic Lemon Squeezer Hand Juicer.jpg" />
+    <Content Include="assets\images\Peher Salt &amp; Pepper Set Stainless Steel.jpg" />
+    <Content Include="assets\images\Pillsbury Chakki Fresh Atta %28Kanik%29.jpg" />
+    <Content Include="assets\images\Quaker Oats Pouch.jpg" />
+    <Content Include="assets\images\Raw Pressery Pomegranate Juice.jpg" />
+    <Content Include="assets\images\Real Fruit Juice - Apple.jpg" />
+    <Content Include="assets\images\RiteBite Max Protein Daily Choco Berry Bars 300g Box.jpg" />
+    <Content Include="assets\images\Saffola Masala Oats, Peppy Tomato Pouch.jpg" />
+    <Content Include="assets\images\saffola soya chunks.jpg" />
+    <Content Include="assets\images\Scotch-Brite Bathroom Scrubber Brush.jpg" />
+    <Content Include="assets\images\SET WET Styling Hair Gel for Men.jpg" />
+    <Content Include="assets\images\Shubhalaxmii Sago %28Sabudana%29.jpg" />
+    <Content Include="assets\images\Skippi Ice Pops Natural.jpg" />
+    <Content Include="assets\images\Slice Thickest Mango Drink.jpg" />
+    <Content Include="assets\images\SmartBuy Blue Vegetable &amp; Fruit Chopper.jpg" />
+    <Content Include="assets\images\SmartBuy Glass Stand Plastic Glass Holder.jpg" />
+    <Content Include="assets\images\Smoodh Flavoured Milk.jpg" />
+    <Content Include="assets\images\SNICKERS Shareable bites Bars.jpg" />
+    <Content Include="assets\images\Sprouts Chana.jpg" />
+    <Content Include="assets\images\Sprouts Mataki.jpg" />
+    <Content Include="assets\images\Sprouts Moong.jpg" />
+    <Content Include="assets\images\Tata Soulfull Ragi Bites Choco Fills Pouch.jpg" />
+    <Content Include="assets\images\Tomato.jpg" />
+    <Content Include="assets\images\Tropicana Orange Juice.jpg" />
+    <Content Include="assets\images\Tuffpro Vegetable &amp; Fruit Grater &amp; Slicer.jpg" />
+    <Content Include="assets\images\WeiKFiELD Cornflour Carton %28Makyache Peeth%29.jpg" />
+    <Content Include="assets\images\WoodyMama Disposable Wooden Table Spoon.jpg" />
+    <Content Include="assets\images\WoodyMama Wooden Chapati Stick Rolling Pin.jpg" />
+    <Content Include="assets\images\yellow toor daal.jpg" />
+    <Content Include="assets\images\Yogabar Almond Fudge Protein Bar Pouch.jpg" />
+    <Content Include="assets\log.png" />
+    <Content Include="assets\dairy.jpg" />
+    <Content Include="assets\fruits.jpg" />
+    <Content Include="assets\home.jpg" />
+    <Content Include="assets\house.jpg" />
+    <Content Include="assets\mango.jpg" />
+    <Content Include="assets\moongdal.png" />
+    <Content Include="assets\packaged.jpg" />
+    <Content Include="assets\persona.jpg" />
+    <Content Include="assets\phone-call.png" />
+    <Content Include="assets\s.png" />
+    <Content Include="assets\search-interface-symbol.png" />
+    <Content Include="assets\shopping-cart %281%29.png" />
+    <Content Include="assets\shopping-cart.png" />
+    <Content Include="assets\snacks.jpg" />
+    <Content Include="assets\staples.jpg" />
+    <Content Include="Site.aspx" />
+    <Content Include="StyleSheet1.css" />
+    <Content Include="StyleSheet2.css" />
+    <Content Include="StyleSheet3.css" />
+    <Content Include="StyleSheet4.css" />
+    <Content Include="Web.config" />
+    <Content Include="login.aspx" />
+    <Content Include="register.aspx" />
+    <Content Include="forgotpassword.aspx" />
+    <Content Include="dai.aspx" />
+    <Content Include="WebForm11.aspx" />
+    <Content Include="stap.aspx" />
+    <Content Include="addtocart.aspx" />
+    <Content Include="ABOUTUS.aspx" />
+    <Content Include="refund.aspx" />
+    <Content Include="snacks.aspx" />
+    <Content Include="pack.aspx" />
+    <Content Include="house.aspx" />
+    <Content Include="WebForm5.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Site.aspx.cs">
+      <DependentUpon>Site.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.aspx.designer.cs">
+      <DependentUpon>Site.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site3.Master.cs">
+      <DependentUpon>Site3.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site3.Master.designer.cs">
+      <DependentUpon>Site3.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forgotpassword.aspx.cs">
+      <DependentUpon>forgotpassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forgotpassword.aspx.designer.cs">
+      <DependentUpon>forgotpassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dai.aspx.cs">
+      <DependentUpon>dai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dai.aspx.designer.cs">
+      <DependentUpon>dai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm11.aspx.cs">
+      <DependentUpon>WebForm11.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm11.aspx.designer.cs">
+      <DependentUpon>WebForm11.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="stap.aspx.cs">
+      <DependentUpon>stap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="stap.aspx.designer.cs">
+      <DependentUpon>stap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addtocart.aspx.cs">
+      <DependentUpon>addtocart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addtocart.aspx.designer.cs">
+      <DependentUpon>addtocart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ABOUTUS.aspx.cs">
+      <DependentUpon>ABOUTUS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ABOUTUS.aspx.designer.cs">
+      <DependentUpon>ABOUTUS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="refund.aspx.cs">
+      <DependentUpon>refund.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="refund.aspx.designer.cs">
+      <DependentUpon>refund.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="snacks.aspx.cs">
+      <DependentUpon>snacks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="snacks.aspx.designer.cs">
+      <DependentUpon>snacks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pack.aspx.cs">
+      <DependentUpon>pack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pack.aspx.designer.cs">
+      <DependentUpon>pack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="house.aspx.cs">
+      <DependentUpon>house.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="house.aspx.designer.cs">
+      <DependentUpon>house.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm5.aspx.cs">
+      <DependentUpon>WebForm5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm5.aspx.designer.cs">
+      <DependentUpon>WebForm5.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\shampo.png" />
+    <Content Include="Site3.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55377</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44323/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

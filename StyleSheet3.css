@@ -1,0 +1,143 @@
+﻿* {
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    font-family:Arial;
+}
+table{
+    width:100%;
+    background-color:orange;
+}
+.logo{
+    height:150px;
+    width:150px;
+}
+.box1{
+    height:100px;
+    width:fit-content;
+}
+.box2{
+    height:100px;
+    width:900px;
+    text-align:center;
+}
+.box3{
+    height:100px;
+    width:350px;
+    text-align:center;
+    justify-content:space-between;
+}
+.box4 {
+    height: 100px;
+    text-align: center;
+    font-size: 15px; 
+    font-weight:500;
+    padding: 5px 10px;
+}
+.txtbx1{
+    border-radius:20px;
+}
+.bt1{
+    border-radius:20px;
+}
+.table2{
+    width:100%;
+    background-color:white;
+    justify-items:center;
+}
+.imgpad {
+    text-align: center;
+    width:155px;
+    padding-top:20px;
+    
+  }
+.imgpad:hover {
+    color: black;
+    border:2px;
+    border-style: solid;
+  }
+.box6{
+   
+    text-align:center;
+    padding-block:10px;
+  
+}
+.table3 {
+    border-spacing:5px;
+    column-gap:20px;
+    height: 100px;
+    width: 100%;
+    background-color:lightgreen;
+   
+}
+.round{
+    text-align:center;
+}
+#Image10 {
+    border: 0.5px solid black;
+    border-radius: 10px;
+}
+.table4{
+    text-align:center;
+}
+.product-container {
+    width: 70%;
+    border-spacing: 20px;
+}
+
+.product-item {
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.2);
+    width: 250px;
+    height: 410px;
+    text-align: center;
+}
+
+.product-image {
+    height: 140px;
+    width: 113px;
+    margin-top: 10px;
+}
+
+.product-link {
+    text-decoration: none;
+}
+
+.product-price {
+    color: #000;
+}
+
+.dropdown {
+    height: 40px;
+    width: 154px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dropdown-list {
+    height: 40px;
+    width: 69px;
+    border-style: none;
+    background-color: white;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.2);
+}
+
+.btn {
+    border-style: none;
+    background-color: white;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.2);
+    border-color: inherit;
+    border-width: medium;
+    height: 40px;
+    width: 147px;
+}
+#Image10{
+    border:2px solid;
+    border-radius:4px;
+    align-content:baseline
+}
+.auto-style1 {
+    width: 1520px;
+    padding-top: 20px;
+}
